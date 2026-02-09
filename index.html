@@ -1,45 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Personal Website</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Filip B. Bečanović</title>
+  <meta name="description" content="Filip B. Bečanović — Postdoctoral researcher in inverse optimal control, biomechanics, robotics, and machine learning.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Crect width='64' height='64' rx='14' fill='%23111'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-size='34' fill='white' font-family='system-ui'%3EFB%3C/text%3E%3C/svg%3E">
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <header>
-    <nav>
-      <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <!-- The download attribute tells the browser to download the file instead of opening it -->
-        <li><a href="cv.pdf" download>CV</a></li>
-      </ul>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="logo" href="#">Filip B. Bečanović</a>
+    <nav class="nav">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="assets/cv/Filip_B_Becanovic_CV.pdf" class="nav-cv">CV</a>
     </nav>
-  </header>
-  
-  <!-- Main Profile Section -->
-  <main>
-    <div class="profile-container">
-      <!-- Profile Description on the Left -->
-      <div class="profile-description">
-        <h1>Welcome to My Personal Website</h1>
-        <p>
-          Hi, I'm [Your Name]! I'm passionate about [your field/interests]. This site showcases my work, research, and publications.
-          Feel free to explore and learn more about my professional journey.
-        </p>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <section class="hero">
+      <h1>Filip B. Bečanović</h1>
+      <p class="lead">Postdoctoral researcher specializing in inverse optimal control, robotics, and biomechanics.</p>
+      <p class="bio">Research Associate at the <a href="https://www.etf.bg.ac.rs/en/faculty/staff/filip-becanovic-5849" target="_blank" rel="noreferrer">University of Belgrade</a>, ETF Robotics Laboratory. Completed a cotutelle Ph.D. between the University of Belgrade and Université Paris-Est Créteil, focused on uncovering optimal control strategies in human motion. Published in IEEE&nbsp;RA-L, Humanoids, CDC, and other venues. Currently serving as Technical Project Manager for the Horizon Europe CITADELS project&nbsp;(~€3M).</p>
+      <div class="contact-row">
+        <span>Belgrade, Serbia</span>
+        <span class="sep" aria-hidden="true">·</span>
+        <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#102;&#105;&#108;&#105;&#112;&#46;&#98;&#101;&#99;&#97;&#110;&#111;&#118;&#105;&#99;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#102;&#105;&#108;&#105;&#112;&#46;&#98;&#101;&#99;&#97;&#110;&#111;&#118;&#105;&#99;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>
       </div>
-      <!-- Profile Picture on the Right -->
-      <div class="profile-picture">
-        <img src="profile.jpg" alt="Profile Picture">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/filipbecanovic/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?hl=en&amp;user=LUl0yykAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
+        <a href="https://github.com/Beca-Filip" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://orcid.org/0000-0003-2952-592X" target="_blank" rel="noreferrer">ORCID</a>
       </div>
-    </div>
-  </main>
-  
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 [Your Name]. All rights reserved.</p>
-  </footer>
+      <div class="cta">
+        <a class="btn" href="assets/cv/Filip_B_Becanovic_CV.pdf">Download CV</a>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Research Associate</h3>
+          <span class="date">2024 – Present</span>
+        </div>
+        <p class="org">University of Belgrade, ETF Robotics Laboratory</p>
+        <p>Leading independent research on inverse optimal control / inverse reinforcement learning for biomechanics. Teaching in Biomechanics and Robotic Systems courses. Technical Project Manager for Horizon Europe CITADELS&nbsp;(~€3M).</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Research Assistant</h3>
+          <span class="date">2021 – 2024</span>
+        </div>
+        <p class="org">University of Belgrade, ETF Robotics Laboratory</p>
+        <p>Conducted Ph.D. research on inverse optimal control for biomechanics. Teaching assistant across multiple courses. Contributed to MUSAE project implementation and to securing €3M funding for CITADELS.</p>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <h2>Education</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Cotutelle PhD — Electrical Engineering &amp; Signal Processing</h3>
+          <span class="date">2020 – 2024</span>
+        </div>
+        <p class="org">University of Belgrade × Université Paris-Est Créteil</p>
+        <p>Dissertation: "Uncovering optimal control strategies in human motion through inverse optimal control." Advisors: Prof. Kosta Jovanović &amp; Prof. Samer Mohammed.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>MSc — Electrical Engineering and Computer Science</h3>
+          <span class="date">2019 – 2020</span>
+        </div>
+        <p class="org">University of Belgrade · Erasmus+ mobility at UPEC, Paris</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>BSc — Electrical Engineering and Computer Science</h3>
+          <span class="date">2015 – 2019</span>
+        </div>
+        <p class="org">University of Belgrade</p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>CITADELS</h3>
+          <span class="date">2025 – Present</span>
+        </div>
+        <p class="org">Technical Project Manager · Horizon Europe · ~€3M · 10 partners, 8 countries</p>
+        <p>Industry 5.0 talent development program in deep technologies. Leading project management across a multi-national consortium, coordinating WP4 researcher secondments (~20 researchers).</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>MUSAE</h3>
+          <span class="date">2023 – 2025</span>
+        </div>
+        <p class="org">Researcher &amp; Management · Horizon Europe · ~€3M · 9 partners, 6 countries</p>
+        <p>Art-technology collaboration for human-centered manufacturing. Mentored artists, facilitated DFA methodology workshops, curated EEG + motion capture datasets.</p>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="section">
+      <h2>Publications</h2>
+
+      <div class="pub-list">
+
+        <div class="pub">
+          <span class="pub-year">2025</span>
+          <div class="pub-body">
+            <p class="pub-title">Inverse Optimal Control of Muscle Force Sharing During Pathological Gait</p>
+            <p class="pub-authors">F. Bečanović, V. Bonnet, K. Jovanović, S. Mohammed, R. Dumas</p>
+            <p class="pub-venue">Journal of Biomechanics (accepted) · <a href="https://arxiv.org/abs/2510.17456" target="_blank" rel="noreferrer">arXiv</a></p>
+          </div>
+        </div>
+
+        <div class="pub">
+          <span class="pub-year">2025</span>
+          <div class="pub-body">
+            <p class="pub-title">Minimal Observations Inverse Reinforcement Learning for Predicting Human Box-Lifting Motions</p>
+            <p class="pub-authors">M. Sabbah, F. Bečanović, S. Mehrdad, L. Righetti, B. Watier, V. Bonnet</p>
+            <p class="pub-venue">IEEE-RAS Humanoids 2025 · <a href="https://hal.science/hal-05191852" target="_blank" rel="noreferrer">HAL</a></p>
+          </div>
+        </div>
+
+        <div class="pub">
+          <span class="pub-year">2025</span>
+          <div class="pub-body">
+            <p class="pub-title">Optimal Control for Human Vertical Jump Motion</p>
+            <p class="pub-authors">D. Mesaroš, M. Sabbah, V. Bonnet, F. Bečanović</p>
+            <p class="pub-venue">RAAD 2025, Springer · <a href="https://doi.org/10.1007/978-3-032-02106-9_26" target="_blank" rel="noreferrer">DOI</a></p>
+          </div>
+        </div>
+
+        <div class="pub">
+          <span class="pub-year">2024</span>
+          <div class="pub-body">
+            <p class="pub-title">Reliability of Single-Level Equality-Constrained Inverse Optimal Control</p>
+            <p class="pub-authors">F. Bečanović, V. Bonnet, K. Jovanović</p>
+            <p class="pub-venue">IEEE-RAS Humanoids 2024, pp. 623–630 · <a href="https://doi.org/10.1109/Humanoids58906.2024.10769923" target="_blank" rel="noreferrer">DOI</a> · <a href="https://arxiv.org/abs/2510.08406" target="_blank" rel="noreferrer">arXiv</a></p>
+          </div>
+        </div>
+
+        <div class="pub">
+          <span class="pub-year">2024</span>
+          <div class="pub-body">
+            <p class="pub-title">Application and Optimal Design of a Soft Robotic Gripper for Grasping Objects of Arbitrary Shape</p>
+            <p class="pub-authors">D. Klasanović, L. Jugović, N. Ružić, F. Bečanović, N. Knežević</p>
+            <p class="pub-venue">IcETRAN 2024 · <a href="https://doi.org/10.1109/IcETRAN62308.2024.10645079" target="_blank" rel="noreferrer">DOI</a></p>
+          </div>
+        </div>
+
+        <div class="pub">
+          <span class="pub-year">2024</span>
+          <div class="pub-body">
+            <p class="pub-title">Human motion estimation application for the marker-based motion capture systems</p>
+            <p class="pub-authors">B. Lukić, F. Bečanović, M. Radmilović</p>
+            <p class="pub-venue">IcETRAN 2024 · <a href="https://doi.org/10.1109/IcETRAN62308.2024.10645143" target="_blank" rel="noreferrer">DOI</a></p>
+          </div>
+        </div>
+
+        <div class="pub">
+          <span class="pub-year">2024</span>
+          <div class="pub-body">
+            <p class="pub-title">Synchronization of Motion Capture and Forceplate Data for Analysis of Vertical Jumping</p>
+            <p class="pub-authors">F. Rodić, F. Bečanović, J. Aleksić, D. Mirkov, K. Jovanović</p>
+            <p class="pub-venue">IcETRAN 2024 · <a href="https://doi.org/10.1109/IcETRAN62308.2024.10645109" target="_blank" rel="noreferrer">DOI</a></p>
+          </div>
+        </div>
+
+        <div class="pub">
+          <span class="pub-year">2022</span>
+          <div class="pub-body">
+            <p class="pub-title">Force Sharing Problem During Gait Using Inverse Optimal Control</p>
+            <p class="pub-authors">F. Bečanović, V. Bonnet, R. Dumas, K. Jovanović, S. Mohammed</p>
+            <p class="pub-venue">IEEE Robotics and Automation Letters, 8(2), 872–879 · <a href="https://doi.org/10.1109/LRA.2022.3217398" target="_blank" rel="noreferrer">DOI</a></p>
+          </div>
+        </div>
+
+        <div class="pub">
+          <span class="pub-year">2022</span>
+          <div class="pub-body">
+            <p class="pub-title">Assessing the Quality of a Set of Basis Functions for Inverse Optimal Control via Projection onto Global Minimizers</p>
+            <p class="pub-authors">F. Bečanović, J. Miller, V. Bonnet, K. Jovanović, S. Mohammed</p>
+            <p class="pub-venue">IEEE 61st Conference on Decision and Control (CDC), pp. 7598–7605 · <a href="https://doi.org/10.1109/CDC51059.2022.9993342" target="_blank" rel="noreferrer">DOI</a></p>
+          </div>
+        </div>
+
+        <div class="pub">
+          <span class="pub-year">2021</span>
+          <div class="pub-body">
+            <p class="pub-title">Influence of muscle co-contraction indicators for different task conditions</p>
+            <p class="pub-authors">M. Radmilović, Đ. Urukalo, M. Petrović, F. Bečanović, K. Jovanović</p>
+            <p class="pub-venue">IcETRAN 2021, pp. 584–590</p>
+          </div>
+        </div>
+
+        <div class="pub">
+          <span class="pub-year">2021</span>
+          <div class="pub-body">
+            <p class="pub-title">Pronalazak Optimizacione Funkcije Kretanja iz Simulirane Demonstracije Pokreta Čučnja</p>
+            <p class="pub-authors">F. Bečanović, V. Bonnet, S. Mohammed, K. Jovanović</p>
+            <p class="pub-venue">ETRAN 2021, pp. 551–555</p>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="scholar-link"><a href="https://scholar.google.com/citations?hl=en&amp;user=LUl0yykAAAAJ" target="_blank" rel="noreferrer">View all on Google Scholar &rarr;</a></p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Filip B. Bečanović</p>
+  </div>
+</footer>
+
 </body>
 </html>

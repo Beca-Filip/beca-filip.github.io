@@ -1,0 +1,470 @@
+/* ============================================================
+   Filip B. Bečanović — Personal Site
+   Minimal, modern, fully static.
+   ============================================================ */
+
+/* --- Reset & Base --- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #111;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: #ccc;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
+}
+
+a:hover {
+  text-decoration-color: #111;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* --- Layout --- */
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Header / Nav --- */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 15px;
+  color: #111;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav a {
+  font-size: 14px;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: #111;
+}
+
+.nav-cv {
+  font-weight: 500;
+  color: #111 !important;
+  padding: 5px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.nav-cv:hover {
+  background: #f5f5f5;
+  border-color: #bbb;
+}
+
+/* --- Hero --- */
+
+.hero {
+  padding: 72px 0 0;
+}
+
+.hero h1 {
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: #111;
+}
+
+.lead {
+  margin-top: 16px;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: #444;
+}
+
+.bio {
+  margin-top: 16px;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.bio a {
+  text-decoration-color: #bbb;
+}
+
+.contact-row {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.contact-row .sep {
+  color: #ccc;
+}
+
+.contact-row a {
+  color: #444;
+}
+
+.social-links {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+  position: relative;
+}
+
+.social-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  transition: background 0.2s;
+}
+
+.social-links a:hover::after {
+  background: #111;
+}
+
+.cta {
+  margin-top: 28px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: #111;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #333;
+}
+
+/* --- Sections --- */
+
+.section {
+  padding-top: 72px;
+}
+
+.section h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #111;
+  margin-bottom: 32px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+/* --- Entry (Experience / Education / Projects) --- */
+
+.entry {
+  margin-bottom: 36px;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.entry-head h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #111;
+}
+
+.date {
+  font-size: 13px;
+  font-weight: 400;
+  color: #999;
+  white-space: nowrap;
+}
+
+.org {
+  font-size: 14px;
+  color: #666;
+  margin-top: 2px;
+  line-height: 1.5;
+}
+
+.entry > p:not(.org) {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* --- Publications --- */
+
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.pub {
+  display: flex;
+  gap: 20px;
+}
+
+.pub-year {
+  font-size: 13px;
+  font-weight: 500;
+  color: #999;
+  min-width: 38px;
+  padding-top: 3px;
+  flex-shrink: 0;
+}
+
+.pub-body {
+  min-width: 0;
+}
+
+.pub-title {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #111;
+}
+
+.pub-authors {
+  font-size: 13px;
+  color: #666;
+  margin-top: 3px;
+  line-height: 1.5;
+}
+
+.pub-venue {
+  font-size: 13px;
+  color: #888;
+  margin-top: 2px;
+  line-height: 1.5;
+}
+
+.pub-venue a {
+  color: #444;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: #ccc;
+  text-underline-offset: 2px;
+}
+
+.pub-venue a:hover {
+  text-decoration-color: #444;
+}
+
+.scholar-link {
+  margin-top: 36px;
+}
+
+.scholar-link a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+}
+
+.scholar-link a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* --- Footer --- */
+
+.footer {
+  margin-top: 96px;
+  padding: 28px 0;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 13px;
+  color: #999;
+}
+
+/* --- 404 page --- */
+
+.page-404 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.page-404 h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.page-404 p {
+  color: #666;
+  font-size: 15px;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .header-inner {
+    height: 48px;
+  }
+
+  .logo {
+    font-size: 14px;
+  }
+
+  .nav {
+    gap: 14px;
+  }
+
+  .nav a {
+    font-size: 13px;
+  }
+
+  .nav-cv {
+    padding: 4px 10px;
+  }
+
+  .hero {
+    padding-top: 48px;
+  }
+
+  .hero h1 {
+    font-size: 1.875rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding-top: 56px;
+  }
+
+  .entry-head {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .pub {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .pub-year {
+    min-width: auto;
+  }
+
+  .footer {
+    margin-top: 64px;
+  }
+}
+
+/* --- Print --- */
+
+@media print {
+  .header,
+  .cta,
+  .social-links,
+  .scholar-link,
+  .nav-cv {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 0;
+  }
+
+  .section {
+    padding-top: 24px;
+  }
+
+  body {
+    font-size: 12px;
+  }
+}
